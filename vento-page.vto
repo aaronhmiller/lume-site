@@ -1,0 +1,28 @@
+---
+layout: layout.vto
+title: My Vento page
+links:
+  - text: My Twitter
+    url: https://twitter.com/aaronmiller8
+  - text: My GitHub profile
+    url: https://github.com/aaronhmiller
+  - text: First page
+    url: /
+  - text: Second page
+    url: /second-page
+---
+<article>
+  <header>
+    <h1>{{ title }}</h1>
+  </header>
+
+  <ul>
+    {{ for link of links }}
+    <li>
+      <a href="{{ link.url }}">
+        {{ link.text }}
+      </a>
+    </li>
+    {{ /for }}
+  </ul>
+</article>
